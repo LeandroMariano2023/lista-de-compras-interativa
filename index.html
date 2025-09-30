@@ -5,20 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
     <title>Início - CRUD de Produtos</title>
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
-<body class="bg-gray-900 text-white flex flex-col justify-center items-center min-h-screen">
+<body
+    class="bg-[url('https://images.pexels.com/photos/8581063/pexels-photo-8581063.jpeg')] h-screen bg-cover text-white flex flex-col justify-between items-center min-h-screen">
     <header class="mb-8 text-4xl font-bold">
-        <h1>Sistema CRUD de Produtos</h1>
+        <h1 class="text-sky-50 text-shadow-lg/20 text-shadow-red-700 text-6xl mt-7">Lista de Compras</h1>
     </header>
 
     <nav>
-        <h2>Menu de Navegação</h2>
-        <ul class="list-disc list-inside border p-4 rounded bg-gray-800 hover:bg-gray-700">
-            <li><a href="cadastro.html" >➕ Cadastrar Novo Produto</a></li>
-            <li><a href="lista.html">📋 Visualizar Lista de Produtos</a></li>
+        <ul class="list-none list-inside border p-4 rounded bg-gray-800">
+            <li>
+                <a href="cadastro.html"
+                    class="inline-block px-4 py-2 my-2 rounded-lg text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md">
+                    <i class="ri-add-large-line"></i>
+                     Cadastrar Novo Produto
+                </a>
+            </li>
+            <li>
+                <a href="lista.html"
+                    class="inline-block px-4 py-2 my-2 rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition duration-300 shadow-md">
+                    <i class="ri-survey-line"></i>
+                     Visualizar Lista de Produtos
+                </a>
+            </li>
         </ul>
     </nav>
 

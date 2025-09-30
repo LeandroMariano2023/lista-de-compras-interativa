@@ -4,47 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
     <title>Lista de Produtos</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <h1>Lista de Produtos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome do Produto</th>
-                <th>Preço</th>
-                <th>Categoria</th>
-                <th>origem</th>
-                <th>Lote</th>
-                <th>data de validade</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="tabela_produtos"></tbody>
-    </table>
-    <a href="cadastro.html">voltar</a>
-    <a href="index.html">Voltar ao Início</a>
-    <script src="assets/js/script.js"></script>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 font-sans">
 
-    <div id="modal-edicao" class="modal-oculto">
-        <div class="modal-conteudo">
-            <h3>Editar Produto</h3>
-            <form id="form-edicao">
-                <input type="hidden" id="edit-id">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-10 border-b-4 border-teal-500 pb-2">
+        <i class="ri-survey-line"></i>
+         Lista de Produtos
+    </h1>
 
-                <label for="edit-nome">Nome do Produto:</label>
-                <input type="text" id="edit-nome" required>
+    <div class="w-full max-w-7xl overflow-x-auto shadow-2xl rounded-lg border border-gray-200 text-center">
+        <table class="min-w-full divide-y divide-gray-200 text-center border-2">
+            <thead class="bg-teal-600">
+                <tr class="border-2">
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Nome do
+                        Produto</th>
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Preço</th>
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Categoria
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Origem
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Lote</th>
+                    <th class="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider">Data de
+                        Validade</th>
+                    <th class="px-6 py-3 text-center text-xs font-semibold text-white uppercase tracking-wider">Ações
+                    </th>
+                </tr>
+            </thead>
 
-                <label for="edit-preco">Preço:</label>
-                <input type="number" id="edit-preco" step="0.01" required>
-
-                <button type="submit" class="btn-salvar">Salvar Edição</button>
-                <button type="button" onclick="fecharModal()" class="btn-cancelar">Cancelar</button>
-            </form>
-        </div>
+            <tbody id="tabela_produtos" class="bg-white divide-y divide-gray-100">
+            </tbody>
+        </table>
     </div>
+
+    <div class="mt-8 flex space-x-6">
+        <a href="cadastro.html"
+            class="text-sm font-medium text-teal-600 hover:text-teal-800 transition duration-150 p-2 border border-teal-600 rounded-lg hover:bg-teal-50">
+            ← Voltar ao Cadastro
+        </a>
+        <a href="index.html"
+            class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-150 p-2 border border-gray-300 rounded-lg hover:bg-gray-100">
+            <i class="ri-home-3-line"></i>
+             Voltar ao Início
+        </a>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

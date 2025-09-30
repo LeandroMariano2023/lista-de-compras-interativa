@@ -4,40 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
     <title>Cadastro de Produtos</title>
 </head>
 
-<body>
-    <h1>Cadastro de Produtos</h1>
-    <form id="form_cadastro">
-        <label for="nome">Nome do Produto</label>
-        <input type="text" id="nome" name="nome" required>
+<body class="bg-gray-300 min-h-screen flex flex-col items-center py-10 font-sans">
 
-        <label for="preco">Preço:</label>
-        <input type="number" id="preco" name="preco" step="0.01" required>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 border-b-4 border-indigo-500 pb-2">
+        Cadastro de Produtos
+    </h1>
 
-        <label for="categoria">Categoria:</label>
-        <select id="categoria" name="categoria" required>
-            <option value="">-- Selecione uma Categoria --</option>
-            <option value="higiene">Higiene</option>
-            <option value="alimentacao">Alimentação</option>
-            <option value="limpeza">Limpeza</option>
-        </select>
+    <form id="form_cadastro" class="w-full max-w-lg bg-white p-8 rounded-xl shadow-2xl space-y-6">
 
-        <label for="origem">origem</label>
-        <input type="text" id="origem" name="origem" required>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
 
-        <label for="lote">Lote</label>
-        <input type="text" id="lote" name="lote" required>
+            <div class="col-span-1 md:col-span-2">
+                <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome do Produto</label>
+                <input type="text" id="nome" name="nome" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
 
-        <label for="data_de_validade">data de validade</label>
-        <input type="date" id="data_de_validade" name="data_de_validade" required>
+            <div>
+                <label for="preco" class="block text-sm font-medium text-gray-700 mb-1">Preço:</label>
+                <input type="number" id="preco" name="preco" step="0.01" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
 
-        <button type="submit">Salvar</button>
+            <div>
+                <label for="categoria" class="block text-sm font-medium text-gray-700 mb-1">Categoria:</label>
+                <select id="categoria" name="categoria" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white appearance-none transition duration-150">
+                    <option value="">-- Selecione uma Categoria --</option>
+                    <option value="higiene">Higiene</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="limpeza">Limpeza</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="origem" class="block text-sm font-medium text-gray-700 mb-1">Origem:</label>
+                <input type="text" id="origem" name="origem" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
+
+            <div>
+                <label for="lote" class="block text-sm font-medium text-gray-700 mb-1">Lote:</label>
+                <input type="text" id="lote" name="lote" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
+
+            <div class="col-span-1 md:col-span-2">
+                <label for="data_de_validade" class="block text-sm font-medium text-gray-700 mb-1">Data de
+                    Validade:</label>
+                <input type="date" id="data_de_validade" name="data_de_validade" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
+        </div>
+
+        <button type="submit"
+            class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition duration-300 mt-6 shadow-lg cursor-pointer">
+            <i class="ri-save-3-line"></i>
+             Salvar Produto
+        </button>
     </form>
-    <br>
-    <a href="index.html">Voltar ao Início</a>
-    <li><a href="lista.html">📋 Visualizar Lista de Produtos</a></li>
+
+    <div class="mt-8 flex space-x-6">
+        <a href="index.html" class="text-sm font-medium text-teal-600 hover:text-teal-800 transition duration-150 p-2 border border-teal-600 rounded-lg hover:bg-teal-50">
+            <i class="ri-home-3-line"></i>
+             Voltar ao Início
+        </a>
+        <a href="lista.html" class="bg-gray-50 text-sm font-medium text-black hover:text-gray-800 transition duration-150 p-2 border border-gray-300 rounded-lg hover:bg-gray-100">
+            <i class="ri-arrow-right-long-fill"></i>
+            Ver lita de Produtos
+        </a>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
